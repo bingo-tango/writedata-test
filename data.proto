@@ -1,0 +1,19 @@
+syntax = "proto3";
+package protobuf;
+
+option java_package = "org.example.protobuf";
+option java_outer_classname = "MyDataProto";
+
+message MyData {
+  repeated float data = 1;
+  int32 bins = 2;
+  int32 frames = 3;
+  ExtraObject extra = 4;
+}
+
+message ExtraObject {
+  string value = 1;
+  int32 data1 = 2;
+  int32 data2 = 3;
+
+}
